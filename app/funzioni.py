@@ -1,6 +1,6 @@
 from pdf2image import convert_from_path
 import pytesseract
-#from os import listdir, path
+from os import listdir, path
 import configparser
 
 def leggi_parametri(file_ini):
@@ -33,3 +33,15 @@ def pdf_to_text(pdf_path):
         n += 1
 
     return text
+
+def lista_cartella(dir_path):
+    lista = [f for f in listdir(dir_path) if path.isfile(path.join(dir_path, f))]
+    return lista
+
+def salva_txt(x, output_path):
+    print("\tsalvo file {}".format(path.split(output_path)[1]))
+    file = open(output_path, "w")
+    file.write(x)
+    file.close
+
+    return True
