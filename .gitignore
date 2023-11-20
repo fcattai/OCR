@@ -1,2 +1,7 @@
 /614KEY-regolamento_prestiti.pdf
 app/__pycache__/funzioni.cpython-38.pyc
+__pycache__
+app/main/base_library.zip
+build
+dist
+
